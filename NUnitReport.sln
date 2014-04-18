@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{B785D7B9-7782-420C-B743-7D1DBF1B776D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{122CE2D4-BB43-4C12-AAA0-7FA40C3B4AD9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnitReport", "NUnitReport", "{B91D6EEE-D18D-4B43-BA7E-B1233BAC74DA}"
+	ProjectSection(SolutionItems) = preProject
+		NUnitReport.xslt = NUnitReport.xslt
+		NUnitReport\TestResult.xml = NUnitReport\TestResult.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B785D7B9-7782-420C-B743-7D1DBF1B776D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B785D7B9-7782-420C-B743-7D1DBF1B776D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B785D7B9-7782-420C-B743-7D1DBF1B776D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B785D7B9-7782-420C-B743-7D1DBF1B776D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
