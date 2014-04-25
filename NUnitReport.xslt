@@ -7,12 +7,6 @@
                 encoding="utf-8"
                 indent="yes"/>
 
-  <!--  <xsl:template match="@* | node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-    </xsl:template> -->
-
   <xsl:template match="test-results">
     <html>
       <head>
@@ -110,13 +104,48 @@
               </tr>
             </tbody>
           </table>
-          <xsl:apply-templates />
+
+          <h2>Test Suites</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Result</th>
+                <th>Time</th>
+                <th>Asserts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates mode="suiteSummary"/>
+            </tbody>
+          </table>
+          <xsl:apply-templates mode="suiteDetails"/>
         </article>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="test-suite[@type='TestFixture']">
-    <h2>
+
+  <xsl:template match="test-suite[@type='TestFixture']" mode="suiteSummary">
+    <tr class="{@result}">
+      <td>
+        <a href="#{@name}FixtureDetails">
+          <xsl:value-of select="@name"/>
+        </a>
+      </td>
+      <td>
+        <xsl:value-of select="@result"/>
+      </td>
+      <td>
+        <xsl:value-of select="@time"/>
+      </td>
+      <td>
+        <xsl:value-of select="@asserts"/>
+      </td>
+    </tr>
+  </xsl:template>
+  
+  <xsl:template match="test-suite[@type='TestFixture']" mode="suiteDetails">
+    <h2 id="{@name}FixtureDetails">
       <xsl:value-of select="@name"/>
     </h2>
     <table>
