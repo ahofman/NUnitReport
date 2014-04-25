@@ -50,6 +50,7 @@
     <Compile Include="FailingTestFixture.cs" />
     <Compile Include="InconclusiveTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkippedTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
